@@ -16,5 +16,17 @@ class estilosTableSeeder extends Seeder
         Estilo::create([
         		'nome' => 'Indie'
         	]);
+
+        Estilo::create([
+        		'nome' => 'Rock'
+        	]);
+
+        Estilo::create([
+        		'nome' => 'KPop'
+        	]);
+
+        Estilo::create([
+        		'nome' => 'Pop'
+        	]);
     }
 }
