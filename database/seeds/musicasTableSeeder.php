@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Musica;
+
 
 class musicasTableSeeder extends Seeder
 {
