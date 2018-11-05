@@ -11,6 +11,10 @@ class musicasTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Musica::create([
+        		'banda'=>'Billie Eillish',
+        		'nome'=> 'you should see me in a crown',
+        		'duracao'=> '00:03:01'
+        	]);
     }
 }
