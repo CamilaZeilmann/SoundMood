@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Estilo;
+
 
 class estilosTableSeeder extends Seeder
 {
@@ -11,6 +13,8 @@ class estilosTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Estilo::create([
+        		'nome' => 'Indie'
+        	]);
     }
 }
