@@ -14,5 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/estilos', 'estiloController@index');
 
+Route::get('/estilos/create', 'estiloController@create');
 Route::get('/musicas', 'musicaController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

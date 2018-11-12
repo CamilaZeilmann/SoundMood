@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+
 <h1>Lista de Musicas</h1>
 <hr>
 @foreach($musicas as $musica)
