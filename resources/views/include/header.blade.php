@@ -13,16 +13,16 @@
 			
 
 			<li class="nav-item">
-				<a class="nav-link" href="/atividades" id="help" aria-haspopup="true" aria-expanded="false">Listar Atividades</a>
+				<a class="nav-link" href="/musicas" id="help" aria-haspopup="true" aria-expanded="false">Listar Músicas</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/atividades/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Atividades</a>
+				<a class="nav-link" href="/musicas/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Músicas</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/mensagens" id="help" aria-haspopup="true" aria-expanded="false">Listar Mensagens</a>
+				<a class="nav-link" href="/estilos" id="help" aria-haspopup="true" aria-expanded="false">Listar Estilos</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/mensagens/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Mensagens</a>
+				<a class="nav-link" href="/estilos/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Estilos</a>
 			</li>
 		</ul>
 

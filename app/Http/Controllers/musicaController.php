@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Musica;
 use App\Estilo;
+use \Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class musicaController extends Controller
@@ -26,8 +27,9 @@ class musicaController extends Controller
      */
     public function create()
     {
-        //
-    }
+        
+                return view ('musicas.create');   
+                    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,7 +39,33 @@ class musicaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = array(
+            'title.required' => 'É obrigatório um título para a música',
+            'banda.required' => 'É obrigatório uma banda para a música'
+        );
+        //vetor com as especificações de validações
+        $regras = array(
+            'title' => 'required|string|max:255',
+            'banda' => 'required',
+        );
+        //cria o objeto com as regras de validação
+        $validador = Validator::make($request->all(), $regras, $messages);
+
+        //executa as validações
+        if ($validador->fails()) {
+            return redirect('musicas/create')
+            ->withErrors($validador)
+            ->withInput($request->all);
+        }
+        //se passou pelas validações, processa e salva no banco...
+        $obj_Mensagem = new Musica();
+        $obj_Mensagem->nome =       $request['title'];
+        $obj_Mensagem->banda =       $request['banda'];
+        $obj_Mensagem->duracao = $request['dura'];
+
+        $obj_Mensagem->save();
+
+        return redirect('/musicas')->with('success', 'Música criada com sucesso!!');
     }
 
     /**
