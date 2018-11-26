@@ -11,7 +11,8 @@ class estilomusicaController extends Controller
 {
     public function create($id){
     	$estilos = Estilo::all();
-    	$musica = Musica::find($id)->with('estilos')->get();
+    	$musica = Musica::where('id',$id)->with('estilos')->get()->first();
+        //dd($musica);
     	return view('estilomusica.create',['estilos' => $estilos, 'musica' => $musica]);
     }
 
